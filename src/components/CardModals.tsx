@@ -158,8 +158,20 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
           <span className="font-semibold">Up to 5%</span>
         </div>
         <div className="summary-row">
-          <span className="text-secondary">{t('modal.annualFee', 'Annual Fee')}</span>
-          <span className="font-semibold text-success">{t('modal.free', 'Free')}</span>
+          <span className="text-secondary">{t('modal.cost', 'Cost')}</span>
+          <span className="font-semibold">
+            {selectedCard === 'white' && '$20'}
+            {selectedCard === 'blue' && '$49'}
+            {selectedCard === 'metal' && '$99'}
+          </span>
+        </div>
+        <div className="summary-row">
+          <span className="text-secondary">{t('modal.spendingLimit', 'Spending Limit')}</span>
+          <span className="font-semibold">
+            {selectedCard === 'white' && '$1,000 / month'}
+            {selectedCard === 'blue' && '$3,000 / month'}
+            {selectedCard === 'metal' && '$10,000 / month'}
+          </span>
         </div>
       </div>
 
