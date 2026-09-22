@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { X, Check, ArrowRight, Sparkles, Plane, Headphones, BedDouble } from 'lucide-react';
 import './CardModals.css';
 
-type Step = 'selection' | 'email' | 'review';
+type Step = 'selection' | 'email' | 'review' | 'network';
 type CardTier = 'white' | 'blue' | 'metal';
 
 interface CardModalsProps {
@@ -16,24 +16,30 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
   const [step, setStep] = useState<Step>('selection');
   const [selectedCard, setSelectedCard] = useState<CardTier>('white');
   const [email, setEmail] = useState('');
+  const [network, setNetwork] = useState<'trc20' | 'bep20'>('trc20');
 
   if (!isOpen) return null;
 
   const handleNext = () => {
     if (step === 'selection') setStep('email');
     else if (step === 'email') setStep('review');
-    else if (step === 'review') {
+    else if (step === 'review') setStep('network');
+    else if (step === 'network') {
       // Final activation logic
-      alert('Card activation initiated for: ' + email + ' / ' + selectedCard);
+      alert('Payment initiated on ' + network.toUpperCase() + ' network for: ' + email + ' / ' + selectedCard);
       onClose();
       // Reset after close
-      setTimeout(() => setStep('selection'), 300);
+      setTimeout(() => {
+        setStep('selection');
+        setEmail('');
+      }, 300);
     }
   };
 
   const handleBack = () => {
     if (step === 'email') setStep('selection');
     if (step === 'review') setStep('email');
+    if (step === 'network') setStep('review');
   };
 
   const renderSelection = () => (
@@ -233,6 +239,48 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
     </>
   );
 
+  const renderNetwork = () => (
+    <>
+      <div className="modal-header text-center">
+        <h2 className="h2">{t('modal.networkTitle', 'Select Network')}</h2>
+        <p className="text-secondary">{t('modal.networkSubtitle', 'Choose your preferred network to make the payment.')}</p>
+        <button className="modal-close" onClick={onClose}><X size={20} /></button>
+      </div>
+
+      <div className="network-options mt-6 flex flex-col gap-3">
+        {/* TRC20 */}
+        <div 
+          className={`card-option ${network === 'trc20' ? 'selected' : ''}`}
+          onClick={() => setNetwork('trc20')}
+        >
+          <div className="card-info ml-2">
+            <div className="card-title font-semibold">Tron (TRC20)</div>
+          </div>
+          <div className={`radio ${network === 'trc20' ? 'checked' : ''}`}>
+            {network === 'trc20' && <Check size={14} className="text-white" />}
+          </div>
+        </div>
+
+        {/* BEP20 */}
+        <div 
+          className={`card-option ${network === 'bep20' ? 'selected' : ''}`}
+          onClick={() => setNetwork('bep20')}
+        >
+          <div className="card-info ml-2">
+            <div className="card-title font-semibold">BNB Smart Chain (BEP20)</div>
+          </div>
+          <div className={`radio ${network === 'bep20' ? 'checked' : ''}`}>
+            {network === 'bep20' && <Check size={14} className="text-white" />}
+          </div>
+        </div>
+      </div>
+
+      <button className="btn btn-primary w-full mt-8" onClick={handleNext}>
+        {t('modal.payBtn', 'Proceed to Payment →')}
+      </button>
+    </>
+  );
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -244,6 +292,7 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
         {step === 'selection' && renderSelection()}
         {step === 'email' && renderEmail()}
         {step === 'review' && renderReview()}
+        {step === 'network' && renderNetwork()}
       </div>
     </div>
   );
