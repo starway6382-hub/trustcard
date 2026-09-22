@@ -1,0 +1,207 @@
+{
+  "nav": {
+    "cards": "Cards",
+    "features": "Features",
+    "rewards": "Rewards",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "getStarted": "Issue Card →"
+  },
+  "hero": {
+    "badge": "Now Available Worldwide",
+    "title": "Spend Crypto\nLike Cash.\nEverywhere.",
+    "subtitle": "The first card that connects directly to your crypto wallet. Spend from your wallet without unnecessary top-ups.",
+    "ctaPrimary": "Issue Card →",
+    "ctaSecondary": "Learn More"
+  },
+  "features": {
+    "sectionLabel": "Features",
+    "headline": "Everything you need.\nNothing you don't.",
+    "supporting": "Built for the modern crypto user. Every feature designed to make your life easier.",
+    "items": {
+      "wallet": {
+        "title": "Direct Wallet Integration",
+        "desc": "Connect your wallet directly and access supported crypto through your card experience."
+      },
+      "globe": {
+        "title": "Global Acceptance",
+        "desc": "Use your card wherever the supported payment network is accepted."
+      },
+      "mobile": {
+        "title": "Apple Pay & Google Pay",
+        "desc": "Use supported digital wallets for convenient contactless payments."
+      },
+      "shield": {
+        "title": "Secure Experience",
+        "desc": "Built around transparent wallet connectivity and secure payment experiences."
+      },
+      "zap": {
+        "title": "Instant Approvals",
+        "desc": "Get approved instantly without tedious paperwork."
+      },
+      "gift": {
+        "title": "Crypto Rewards",
+        "desc": "Earn eligible crypto rewards when you spend."
+      }
+    }
+  },
+  "acceptance": {
+    "heading": "Spend wherever you go.",
+    "supporting": "Use your card wherever the supported payment network is accepted.",
+    "metric": "80M+",
+    "metricLabel": "Supported locations"
+  },
+  "digitalWallets": {
+    "heading": "Your card, wherever you need it.",
+    "supporting": "Add your supported card to your preferred digital wallet and pay with your phone or watch."
+  },
+  "rewards": {
+    "badge": "Rewards",
+    "heading": "Earn crypto on every swipe.",
+    "supporting": "Turn everyday purchases into portfolio growth.",
+    "categories": {
+      "dining": "Dining & Travel",
+      "shopping": "Online Shopping",
+      "everything": "Everything Else"
+    }
+  },
+  "premiumCard": {
+    "heading": "Made for modern crypto spending.",
+    "supporting": "Premium design, simple crypto payments."
+  },
+  "howItWorks": {
+    "heading": "How it works",
+    "step1": {
+      "title": "Choose your card",
+      "desc": "Select the tier that matches your spending style."
+    },
+    "step2": {
+      "title": "Enter your email",
+      "desc": "Provide a secure email for notifications."
+    },
+    "step3": {
+      "title": "Review your card",
+      "desc": "Check your selected perks and benefits."
+    },
+    "step4": {
+      "title": "Activate your card",
+      "desc": "Connect your wallet and start spending instantly."
+    }
+  },
+  "security": {
+    "heading": "Your crypto.\nYour control.",
+    "items": {
+      "connection": "Secure wallet connection",
+      "transparent": "Transparent experience",
+      "auth": "Clear authorization",
+      "controls": "Spending controls",
+      "visibility": "Transaction visibility"
+    }
+  },
+  "faq": {
+    "whatIs": {
+      "q": "What is the crypto card?",
+      "a": "A debit card that allows you to spend your crypto balance directly."
+    },
+    "howWorks": {
+      "q": "How does the card work?",
+      "a": "It connects to your wallet and instantly converts crypto to fiat at the point of sale."
+    },
+    "cryptoSupported": {
+      "q": "Which crypto assets are supported?",
+      "a": "We support major assets including BTC, ETH, and stablecoins."
+    },
+    "walletsSupported": {
+      "q": "Which wallets are supported?",
+      "a": "Trust Wallet and other major Web3 wallets via WalletConnect."
+    },
+    "countriesSupported": {
+      "q": "Which countries are supported?",
+      "a": "The card is available in over 100 countries globally."
+    },
+    "cardFees": {
+      "q": "What are the card fees?",
+      "a": "Zero annual fees for virtual and standard physical cards."
+    },
+    "howRewardsWork": {
+      "q": "How do rewards work?",
+      "a": "Earn up to 5% back on all purchases, paid in the crypto of your choice."
+    },
+    "applePay": {
+      "q": "Can I use Apple Pay?",
+      "a": "Yes, our cards are fully compatible with Apple Pay."
+    },
+    "googlePay": {
+      "q": "Can I use Google Pay?",
+      "a": "Yes, our cards are fully compatible with Google Pay."
+    },
+    "availability": {
+      "q": "Is the card available in my country?",
+      "a": "Check the app for real-time availability in your region."
+    },
+    "howToGet": {
+      "q": "How do I get a card?",
+      "a": "Simply apply through the Trust Wallet app or our website."
+    },
+    "afterActivation": {
+      "q": "What happens after activation?",
+      "a": "You can start spending immediately with the virtual card."
+    }
+  },
+  "modal": {
+    "issueTitle": "Issue Card",
+    "issueSubtitle": "Choose the card that suits your style.",
+    "whiteCard": {
+      "title": "Virtual White",
+      "desc": "Perfect for online subscriptions and Apple Pay. Totally free."
+    },
+    "blueCard": {
+      "title": "Physical Blue",
+      "desc": "The signature Trust Wallet card for everyday offline spending."
+    },
+    "metalCard": {
+      "title": "Premium Metal",
+      "badge": "$20K+",
+      "desc": "For high-balance users. Unlock VIP perks and higher limits."
+    },
+    "continue": "Continue →",
+    "emailTitle": "Your email",
+    "emailSubtitle": "Enter your email to continue to card activation.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "readyToIssue": "Ready to issue.",
+    "reviewSubtitle": "Review your card before issuance.",
+    "card": "Card",
+    "cashback": "Cashback",
+    "annualFee": "Annual Fee",
+    "free": "Free",
+    "includedPerks": "INCLUDED PERKS",
+    "perks": {
+      "claudePro": "Claude Pro",
+      "lounges": "Airport lounges",
+      "concierge": "24/7 concierge",
+      "hotel": "Hotel upgrades"
+    },
+    "activateBtn": "Activate your card →"
+  },
+  "finalCta": {
+    "heading": "Ready to spend crypto differently?",
+    "supporting": "Choose your card and get started."
+  },
+  "footer": {
+    "desc": "The future of crypto payments. Spend supported digital assets through your card.",
+    "product": "PRODUCT",
+    "legal": "LEGAL",
+    "support": "SUPPORT",
+    "social": "SOCIAL",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookie": "Cookie Policy",
+      "aml": "AML Policy",
+      "risk": "Risk Disclosure",
+      "help": "Help Center",
+      "contact": "Contact"
+    }
+  }
+}

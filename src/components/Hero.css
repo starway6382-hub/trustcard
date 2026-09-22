@@ -1,0 +1,134 @@
+.hero-section {
+  padding: 100px 0 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 12px rgba(0, 71, 255, 0.08);
+  border: 1px solid rgba(0, 71, 255, 0.08);
+  font-size: 0.875rem;
+  animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 2px 12px rgba(0, 71, 255, 0.08); }
+  50% { box-shadow: 0 4px 20px rgba(0, 71, 255, 0.15); }
+}
+
+.hero-title {
+  white-space: nowrap;
+}
+
+.hero-subtitle {
+  line-height: 1.7;
+  max-width: 500px;
+  font-size: 1.15rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-checks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.check-icon {
+  color: var(--success-green);
+}
+
+.hero-visual-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hero-image-render {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  object-fit: contain;
+  animation: float-illustration 6s ease-in-out infinite;
+  margin-right: -100px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08));
+}
+
+@keyframes float-illustration {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 60px 0 80px;
+  }
+  
+  .hero-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-title {
+    white-space: normal;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-subtitle {
+    max-width: 460px;
+  }
+  
+  .hero-checks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-visual-wrapper {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .hero-image-render {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}

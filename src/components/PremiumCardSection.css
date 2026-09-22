@@ -1,0 +1,39 @@
+.premium-card-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.massive-metal-card {
+  width: 100%;
+  transform: rotateX(8deg);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+.massive-metal-card:hover {
+  transform: rotateX(0deg) scale(1.03);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.2);
+}
+
+.ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(0,71,255,0.08) 0%, rgba(255,255,255,0) 55%);
+  z-index: 1;
+  pointer-events: none;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}

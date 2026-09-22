@@ -1,0 +1,84 @@
+.digital-wallets-section {
+  position: relative;
+  z-index: 10;
+  border-top: none;
+  background-color: #FAFBFC;
+  padding-bottom: 120px;
+}
+
+.pay-pill-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pay-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  opacity: 0.45;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  padding: 0 20px;
+}
+
+.logo-strip:hover {
+  opacity: 0.7;
+}
+
+.wallet-brand {
+  display: flex;
+  align-items: center;
+  color: #1E293B;
+  transition: opacity 0.3s ease;
+}
+
+.wallet-brand:hover {
+  opacity: 0.8;
+}
+
+.backers-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.backer-card {
+  background: white;
+  padding: 20px 36px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex: 1;
+  min-width: 170px;
+  max-width: 220px;
+}
+
+.backer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.06);
+}
+
+@media (max-width: 900px) {
+  .logo-strip {
+    gap: 32px;
+  }
+  .backer-card {
+    min-width: 140px;
+    padding: 16px 24px;
+  }
+}
