@@ -275,7 +275,13 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
 
-      <button className="btn btn-primary w-full mt-8" onClick={handleNext}>
+      <div className="text-center mt-6">
+        <p className="text-sm text-secondary font-medium px-2">
+          You will be redirected to your Trust Wallet to make the payment.
+        </p>
+      </div>
+
+      <button className="btn btn-primary w-full mt-4" onClick={handleNext}>
         {t('modal.payBtn', 'Proceed to Payment →')}
       </button>
     </>
