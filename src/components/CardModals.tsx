@@ -123,13 +123,13 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
         <input 
           type="email" 
           className="email-input mt-2" 
-          placeholder={t('modal.emailPlaceholder', 'you@email.com')}
+          placeholder={t('modal.emailPlaceholder', 'you@gmail.com')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
-      <button className="btn btn-primary w-full mt-8" onClick={handleNext} disabled={!email}>
+      <button className="btn btn-primary w-full mt-8" onClick={handleNext} disabled={!email || !email.includes('@gmail.com')}>
         {t('modal.continue', 'Continue →')}
       </button>
     </>
@@ -180,22 +180,50 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
           {t('modal.includedPerks', 'INCLUDED PERKS')}
         </p>
         <div className="perks-grid">
-          <div className="perk-item">
-            <Sparkles size={16} className="text-orange-500" />
-            <span className="font-medium text-sm">{t('modal.perks.claudePro', 'Claude Pro')}</span>
-          </div>
-          <div className="perk-item">
-            <Plane size={16} className="text-tw-blue" />
-            <span className="font-medium text-sm">{t('modal.perks.lounges', 'Airport lounges')}</span>
-          </div>
-          <div className="perk-item">
-            <Headphones size={16} className="text-purple-500" />
-            <span className="font-medium text-sm">{t('modal.perks.concierge', '24/7 concierge')}</span>
-          </div>
-          <div className="perk-item">
-            <BedDouble size={16} className="text-blue-400" />
-            <span className="font-medium text-sm">{t('modal.perks.hotel', 'Hotel upgrades')}</span>
-          </div>
+          {selectedCard === 'white' && (
+            <>
+              <div className="perk-item">
+                <Headphones size={16} className="text-purple-500" />
+                <span className="font-medium text-sm">{t('modal.perks.priority', 'Priority support')}</span>
+              </div>
+              <div className="perk-item">
+                <Sparkles size={16} className="text-tw-blue" />
+                <span className="font-medium text-sm">{t('modal.perks.virtual', 'Virtual access')}</span>
+              </div>
+            </>
+          )}
+          {selectedCard === 'blue' && (
+            <>
+              <div className="perk-item">
+                <Headphones size={16} className="text-purple-500" />
+                <span className="font-medium text-sm">{t('modal.perks.priority', 'Priority support')}</span>
+              </div>
+              <div className="perk-item">
+                <Sparkles size={16} className="text-orange-500" />
+                <span className="font-medium text-sm">{t('modal.perks.claudePro', 'Claude Pro')}</span>
+              </div>
+            </>
+          )}
+          {selectedCard === 'metal' && (
+            <>
+              <div className="perk-item">
+                <Sparkles size={16} className="text-orange-500" />
+                <span className="font-medium text-sm">{t('modal.perks.claudePro', 'Claude Pro')}</span>
+              </div>
+              <div className="perk-item">
+                <Plane size={16} className="text-tw-blue" />
+                <span className="font-medium text-sm">{t('modal.perks.lounges', 'Airport lounges')}</span>
+              </div>
+              <div className="perk-item">
+                <Headphones size={16} className="text-purple-500" />
+                <span className="font-medium text-sm">{t('modal.perks.concierge', '24/7 concierge')}</span>
+              </div>
+              <div className="perk-item">
+                <BedDouble size={16} className="text-blue-400" />
+                <span className="font-medium text-sm">{t('modal.perks.hotel', 'Hotel upgrades')}</span>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
