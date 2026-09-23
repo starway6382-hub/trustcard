@@ -82,3 +82,37 @@
     padding: 16px 24px;
   }
 }
+
+@media (max-width: 480px) {
+  .digital-wallets-section {
+    padding-bottom: 60px;
+  }
+  .logo-strip {
+    gap: 20px;
+    padding: 0 8px;
+  }
+  .wallet-brand {
+    font-size: 1rem !important;
+  }
+  .wallet-brand svg {
+    width: 20px;
+    height: 20px;
+  }
+  .backers-grid {
+    gap: 10px;
+    padding: 0 8px;
+  }
+  .backer-card {
+    min-width: 0;
+    max-width: none;
+    padding: 14px 16px;
+    font-size: 0.85rem;
+  }
+  .backer-card .text-2xl {
+    font-size: 1.1rem;
+  }
+  .backer-card svg {
+    width: 20px;
+    height: 20px;
+  }
+}

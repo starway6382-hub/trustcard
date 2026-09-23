@@ -156,3 +156,26 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 0;
+  }
+  .navbar-actions {
+    gap: 8px;
+  }
+  .btn-sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  .lang-btn {
+    padding: 6px 8px;
+  }
+  .ml-4 {
+    margin-left: 8px;
+  }
+  .lang-dropdown {
+    right: -16px;
+    min-width: 160px;
+  }
+}

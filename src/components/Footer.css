@@ -62,3 +62,18 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 0 32px;
+  }
+  .footer-grid {
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  .footer-social {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

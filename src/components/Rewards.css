@@ -130,3 +130,30 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .rewards-layout {
+    gap: 40px;
+  }
+  .rewards-text {
+    text-align: center;
+  }
+  .progress-bars {
+    max-width: 100%;
+  }
+  .rewards-grid-2x2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 100%;
+  }
+  .reward-coin-card {
+    padding: 20px 16px;
+  }
+  .max-badge {
+    width: 72px;
+    height: 72px;
+  }
+  .max-badge span:first-of-type {
+    font-size: 1.3rem !important;
+  }
+}

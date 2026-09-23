@@ -95,3 +95,30 @@
     margin-top: 40px;
   }
 }
+
+@media (max-width: 480px) {
+  .flex-security {
+    gap: 40px;
+  }
+  .security-text {
+    text-align: center;
+  }
+  .security-item {
+    padding: 16px;
+    gap: 12px;
+  }
+  .security-item span {
+    font-size: 0.95rem !important;
+  }
+  .shield-illustration {
+    width: 220px;
+    height: 220px;
+    margin-top: 20px;
+  }
+  .shield-overlay-card {
+    width: 160px;
+    padding: 16px;
+    right: -10px;
+    bottom: -10px;
+  }
+}

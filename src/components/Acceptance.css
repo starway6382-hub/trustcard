@@ -70,3 +70,22 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .acceptance-card {
+    padding: 32px 20px;
+    border-radius: var(--radius-lg);
+    gap: 32px;
+    text-align: center;
+  }
+  .globe-mock {
+    width: 200px;
+    height: 200px;
+  }
+  .metric-value {
+    font-size: 2.2rem;
+  }
+  .metric-box {
+    padding: 20px;
+  }
+}

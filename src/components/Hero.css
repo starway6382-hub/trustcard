@@ -132,3 +132,40 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 0 60px;
+  }
+  
+  .hero-layout {
+    gap: 24px;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-checks {
+    gap: 16px;
+  }
+  
+  .check-item {
+    font-size: 0.85rem;
+  }
+  
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}

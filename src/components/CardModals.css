@@ -236,3 +236,38 @@
   left: auto;
   right: 24px;
 }
+
+@media (max-width: 480px) {
+  .card-option {
+    padding: 12px;
+    gap: 12px;
+  }
+  .card-preview {
+    width: 64px;
+    height: 42px;
+  }
+  .card-title {
+    font-size: 0.95rem;
+  }
+  .card-info .text-sm {
+    font-size: 0.8rem;
+  }
+  .perks-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .perk-item {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+  .review-summary {
+    padding: 16px;
+  }
+  .summary-row {
+    font-size: 0.9rem;
+  }
+  .back-btn {
+    top: 4px;
+    left: 4px;
+  }
+}

@@ -82,3 +82,21 @@
     box-shadow: 0 0 0 8px var(--bg-main);
   }
 }
+
+@media (max-width: 480px) {
+  .timeline-container {
+    padding-left: 16px;
+    gap: 36px;
+  }
+  .timeline-step {
+    padding-left: 64px;
+  }
+  .timeline-line {
+    left: 48px;
+  }
+  .step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 0.95rem;
+  }
+}
