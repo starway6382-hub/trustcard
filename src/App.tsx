@@ -13,6 +13,8 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { CardShowcase } from './components/CardShowcase';
 import { ScrollToTop } from './components/ScrollToTop';
+import { SupportBot } from './components/SupportBot';
+import { FooterPages } from './components/FooterPages';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,6 +34,8 @@ function App() {
       <Footer />
       <CardModals isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <ScrollToTop />
+      <SupportBot />
+      <FooterPages />
     </div>
   );
 }

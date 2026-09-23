@@ -9,7 +9,7 @@ export const FAQ = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="section-padding bg-main">
+    <section className="section-padding bg-main" id="faq">
       <div className="container">
         <h2 className="h2 text-center mb-12">FAQ</h2>
         

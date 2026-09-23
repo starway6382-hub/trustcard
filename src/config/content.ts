@@ -60,9 +60,8 @@ export const productConfig = {
     'afterActivation'
   ],
   socialLinks: {
-    twitter: '#',
-    telegram: '#',
-    discord: '#'
+    twitter: 'https://x.com/TrustWallet',
+    telegram: 'https://t.me/trustwalletcardpay_bot'
   },
   legalLinks: [
     { key: 'privacy', url: '#' },

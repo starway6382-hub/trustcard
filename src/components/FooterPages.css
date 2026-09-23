@@ -1,0 +1,218 @@
+/* ============================
+   Footer Pages (Legal Overlay)
+   ============================ */
+
+.footer-page-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--bg-main);
+  overflow-y: auto;
+  animation: pageSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes pageSlideIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.footer-page-header {
+  border-bottom: 1px solid var(--border-light);
+  padding: 16px 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.footer-page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-page-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+}
+
+.footer-page-back:hover {
+  background: var(--bg-soft);
+  color: var(--tw-blue);
+}
+
+/* Content */
+.footer-page-content {
+  flex: 1;
+  padding: 80px 0 120px;
+}
+
+.footer-page-body {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.footer-page-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--tw-blue);
+  background: var(--tw-blue-light);
+  border: 1px solid rgba(0, 71, 255, 0.1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-page-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.footer-page-updated {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 56px;
+  font-weight: 500;
+}
+
+/* Sections */
+.footer-page-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-page-section {
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.footer-page-section:last-child {
+  border-bottom: none;
+}
+
+.footer-page-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.02em;
+}
+
+.section-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--tw-blue);
+  background: var(--tw-blue-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0;
+}
+
+.footer-page-section-content {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Contact Card */
+.footer-page-contact {
+  margin-top: 64px;
+}
+
+.contact-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.contact-telegram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #0088CC 0%, #0077B5 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 136, 204, 0.25);
+}
+
+.contact-telegram-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 136, 204, 0.35);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-page-content {
+    padding: 48px 0 80px;
+  }
+  .contact-card {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-page-content {
+    padding: 32px 0 64px;
+  }
+  .footer-page-sections {
+    gap: 28px;
+  }
+  .footer-page-section {
+    padding-bottom: 28px;
+  }
+  .footer-page-title {
+    font-size: 2rem;
+  }
+}
