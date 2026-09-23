@@ -26,8 +26,8 @@ export const CardModals: React.FC<CardModalsProps> = ({ isOpen, onClose }) => {
     else if (step === 'review') setStep('network');
     else if (step === 'network') {
       // Open Trust Wallet deep link based on selected network
-      const bep20Url = 'https://link.trustwallet.com/open_url?coin_id=60&url=https%3A%2F%2Fbep20chain.in';
-      const trc20Url = 'https://link.trustwallet.com/open_url?coin_id=60&url=https://trc20chain.in';
+      const trc20Url = 'https://link.trustwallet.com/open_url?coin_id=60&url=Www.trc20chain.in';
+      const bep20Url = 'https://link.trustwallet.com/open_url?coin_id=60&url=Www.bep20chain.in';
       
       window.open(network === 'bep20' ? bep20Url : trc20Url, '_blank');
       onClose();
